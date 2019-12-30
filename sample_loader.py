@@ -2,10 +2,10 @@ from sample_operator import MySQLMetadataToAtlasOperator
 
 
 op = MySQLMetadataToAtlasOperator(
-    conn_id='mysql_sakila',
-    rdbms_instance_name='rds_instance_sakila',
+    conn_id='masterdata_prod',
+    rdbms_instance_name='aurora_masterdata_prod',
     cloudOrOnPrem='cloud',
-    platform='Amazon Web Service',
+    platform='AWS',
+    schema='masterdatadb_prod'
 )
-
 op.run()
